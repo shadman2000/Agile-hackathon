@@ -5,7 +5,7 @@
 }
 
 .navbar a{
-     color: white;
+     color: white !important;
      text
 }
 
@@ -27,9 +27,8 @@ nav{
      color: white;
 }
 
-.navbar li:hover{
-     font-style: bold;
-     color: #3399ff;
+.navbar ul a:hover{
+     color: #3399ff !important;
      -webkit-transition: all 0.2s ease-in-out;
      -moz-transition: all 0.2s ease-in-out;
      -o-transition: all 0.2s ease-in-out;
