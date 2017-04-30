@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Confirm my facts</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/sandstone/bootstrap.min.css" rel="stylesheet" integrity="sha384-G3G7OsJCbOk1USkOY4RfeX1z27YaWrZ1YuaQ5tbuawed9IoreRDpWpTkZLXQfPm3" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="javascript/index.js"></script>
+    <link type="text/css" rel="stylesheet" href="indexstyle.css">
+  </head>
+  <body>
+    
+    <!--back logo start-->
+    
+    <div class="bklogo">
+    <button class="btn-info bklogobtn"><img src="http://freevector.co/wp-content/uploads/2009/05/54906-arrow-back-button.png" height="20" width="20" /></button>
+    </div>
+    
+    <!--Logo Start-->
+    <div id=logo class="logo logohidden"></div>
+    <!--Logo Finish-->
+    
+    <!--Splash Screen Start-->
+    <div class="welcome">
+      <h1 class="welcometxt wlcmtxthidden">WELCOME</h1>
+    </div>
+    <!--Splash Screen End-->
+    
+    <!--buttons start-->
+
+    <button type="button" class="btn-info go">Let's Go!</button>
+    <!--button end-->
+    
+    <!--Login form start-->
+    <div class="container">
+    <div class="formcontainer">
+      <div class="socialcontainer">
+          <div class="fblogin">
+              <a href="#"><img src="http://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Facebook_logo_%28square%29.png/600px-Facebook_logo_%28square%29.png" height="20" width="20" />
+              <strong>Sign In With Facebook</strong>
+              </a>
+           </div>
+           <div class="googlelogin">
+              <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Logo_google%2B_2015.png" height="20" width="20" />
+              <strong>Sign In With Google</strong>
+              </a>
+            </div>
+            <div style="height:35px"></div>
+            </div><hr>
+                <div class="logincontainer">
+                  <form style="margin-top:10px" action="login" id="logingform" name="loginForm">
+                  <label>Username</label><br>
+                  <input style="text-align:center" class="form-control" type="username" name="userid" placeholder="you@example.com"><br><div style="height:10px"></div>
+                  <label for="pwd">Password</label><br>
+                  <input style="text-align:center" class="form-control" type="password" name="userpswrd" placeholder="******"><br>
+                  <a class="forgot" href="#"><span style="color:#653d00"><i><strong>Forgot Your Password?</strong></i></span></a>
+                <div style="height:10px"></div>
+            </form>
+        </div>
+        <button onclick ="checkIt()" id="checkit" type="button" class="btn-success">Log In</button><br><div style="height:10px; border-radius:3px;"></div>
+        <button style="text-align:center" type="button" class="btn-info sub">Don't Have an account?Sign up!!</button><div style="height:5px"></div>
+        <i><strong>OR</strong></i><div style="height:5px"></div>
+        <button style="border-radius:3px;" type="button" class="btn-danger cnt">Continue</button>
+      </div>
+      </div>
+
+
+    <!--Login form end-->
+    
+    <!--SignUp form start-->
+    
+    <div class="suformcontainer">
+      <div class="socialcontainer">
+          <div class="fblogin">
+              <a href="#"><img src="http://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Facebook_logo_%28square%29.png/600px-Facebook_logo_%28square%29.png" height="20" width="20" />
+              <strong>Sign Up With Facebook</strong>
+              </a>
+           </div>
+           <div class="googlelogin">
+              <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Logo_google%2B_2015.png" height="20" width="20" />
+              <strong>Sign Up With Google</strong>
+              </a>
+            </div>
+            <div style="height:35px"></div>
+            </div><hr>
+                <div class="logincontainer">
+                  <form style="margin-top:10px" action="login" id="logingform">
+                  <div style="text-align:center; border-radius:20px;"><button style="background-color:transparent; border-color:transparent;"><img style="border-radius:50%;" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSbDBdNZXRacv4OlU6A_ICuBBu75OdstrxWQIFhBUcxjCpv9E8qtQ" height="150" width="150" /></button></div>
+                  <label>Select Username</label><br>
+                  <input style="text-align:center" class="form-control" type="username" placeholder="example2000rocks"><br><div style="height:5px"></div>
+                  <label for="pwd">Email</label>
+                  <input style="text-align:center" class="form-control" type="email" placeholder="example@gmail.com"><br><div style="height:5px"></div>
+                  <label for="pwd">Creat Password</label><br>
+                  <input style="text-align:center" class="form-control" type="password" placeholder="******"><br><div style="height:5px"></div>
+                  <label for="pwd">Confirm Password</label><br>
+                  <input style="text-align:center" class="form-control" type="password" placeholder="******"><br><div style="height:5px"></div>
+                <div style="height:10px"></div>
+            </form>
+        </div>
+        <button type="button" class="btn-success ju">Join Up</button><br><div style="height:10px; border-radius:3px;"></div>
+      </div>
+    
+    <!--Sign up from end-->
+    
+    
+    <!--JS-->
+    <script>
+      /*global $*/
+      
+      $(document).ready(function(){
+        $(".logo").animate({top:"270px", left:"-30px", opacity:'1'}, 2000);
+        $(".welcometxt").delay(3000).fadeIn(3000);
+        $(".login").delay(3000).fadeIn(3000);
+        $(".go").delay(3000).fadeIn(3000);
+        
+      //When Go Button Clicked start
+      
+        $(".go").click(function(){
+          $(".logo").animate({top:"770px" , opacity:"0" });
+          $(".welcometxt").delay(500).fadeOut(1000);
+          $(".login").delay(500).fadeIn(1000);
+          $(".go").delay(500).fadeOut(1000);
+          $(".formcontainer").delay(2500).fadeIn("slow");
+          $(".cnt").click(function(){
+            $(".formcontainer").fadeOut("fast");
+            $(".login").delay(1000);
+            window.location.href="index.html";
+          });
+          $(".bklogo").delay(500).fadeIn(1000);
+          $(".bklogobtn").delay(500).fadeIn("slow");
+          $(".bklogobtn").click(function(){
+            $(".formcontainer").fadeOut(1000);
+            $(".logo").animate({top:"270px" , opacity:"1"});
+            $(".welcometxt").delay(500).fadeIn(1000);
+            $(".go").delay(500).fadeIn(1000);
+            $(".bklogo").fadeOut(1000);
+          });
+        });
+      });
+      
+      //When Go Button Clicked Finish
+      
+      //Sign In start
+      
+      // Get the word with the L
+      // Get the top property (height from the top of the page)
+      // Animate to that top property
+      
+      $(".sub").click(function(){
+        $(".loginplz").fadeOut("slow");
+        $(".formcontainer").fadeOut("slow");
+        $(".su").delay(1000).fadeIn("slow");
+        $(".suformcontainer").delay(1000).fadeIn("slow");
+        $(".su").fadeIn("slow");
+        $(".bklogobtn").click(function(){
+          $(".suformcontainer").fadeOut("slow");
+          $(".su").fadeOut("slow");
+          $(".formcontainer").fadeOut(1000);
+          $(".logo").delay(500).animate({top:"270px" , opacity:"1"});
+          $(".welcometxt").delay(2000).fadeIn(1000);
+          $(".go").delay(500).fadeIn(1000);
+          $(".bklogo").fadeOut(1000);
+          });
+      });
+      
+      
+      //sing up end
+      
+    </script>
+  </body>
+</html>
